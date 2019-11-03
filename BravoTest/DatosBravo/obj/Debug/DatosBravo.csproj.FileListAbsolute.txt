@@ -1,0 +1,6 @@
+D:\Usuario\Escritorio\Cosas Raras\facultad\Diseño\ImplementacionBravo\BravoTest\DatosBravo\bin\Debug\DatosBravo.dll
+D:\Usuario\Escritorio\Cosas Raras\facultad\Diseño\ImplementacionBravo\BravoTest\DatosBravo\bin\Debug\DatosBravo.pdb
+D:\Usuario\Escritorio\Cosas Raras\facultad\Diseño\ImplementacionBravo\BravoTest\DatosBravo\obj\Debug\DatosBravo.csprojAssemblyReference.cache
+D:\Usuario\Escritorio\Cosas Raras\facultad\Diseño\ImplementacionBravo\BravoTest\DatosBravo\obj\Debug\DatosBravo.csproj.CoreCompileInputs.cache
+D:\Usuario\Escritorio\Cosas Raras\facultad\Diseño\ImplementacionBravo\BravoTest\DatosBravo\obj\Debug\DatosBravo.dll
+D:\Usuario\Escritorio\Cosas Raras\facultad\Diseño\ImplementacionBravo\BravoTest\DatosBravo\obj\Debug\DatosBravo.pdb

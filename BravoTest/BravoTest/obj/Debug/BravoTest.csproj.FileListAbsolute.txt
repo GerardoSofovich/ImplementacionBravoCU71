@@ -1,0 +1,10 @@
+D:\Usuario\Escritorio\Cosas Raras\facultad\Diseño\ImplementacionBravo\BravoTest\BravoTest\bin\Debug\BravoTest.exe.config
+D:\Usuario\Escritorio\Cosas Raras\facultad\Diseño\ImplementacionBravo\BravoTest\BravoTest\bin\Debug\BravoTest.exe
+D:\Usuario\Escritorio\Cosas Raras\facultad\Diseño\ImplementacionBravo\BravoTest\BravoTest\bin\Debug\BravoTest.pdb
+D:\Usuario\Escritorio\Cosas Raras\facultad\Diseño\ImplementacionBravo\BravoTest\BravoTest\bin\Debug\DatosBravo.dll
+D:\Usuario\Escritorio\Cosas Raras\facultad\Diseño\ImplementacionBravo\BravoTest\BravoTest\bin\Debug\DatosBravo.pdb
+D:\Usuario\Escritorio\Cosas Raras\facultad\Diseño\ImplementacionBravo\BravoTest\BravoTest\obj\Debug\BravoTest.csprojAssemblyReference.cache
+D:\Usuario\Escritorio\Cosas Raras\facultad\Diseño\ImplementacionBravo\BravoTest\BravoTest\obj\Debug\BravoTest.csproj.CoreCompileInputs.cache
+D:\Usuario\Escritorio\Cosas Raras\facultad\Diseño\ImplementacionBravo\BravoTest\BravoTest\obj\Debug\BravoTest.csproj.CopyComplete
+D:\Usuario\Escritorio\Cosas Raras\facultad\Diseño\ImplementacionBravo\BravoTest\BravoTest\obj\Debug\BravoTest.exe
+D:\Usuario\Escritorio\Cosas Raras\facultad\Diseño\ImplementacionBravo\BravoTest\BravoTest\obj\Debug\BravoTest.pdb

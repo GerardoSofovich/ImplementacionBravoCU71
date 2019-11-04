@@ -17,9 +17,11 @@ namespace DatosBravo
         {
             Console.WriteLine("Test pantalla");
         }
-        public void ConfirmarFinalizacionIntervencion()
+        public bool ConfirmarFinalizacionIntervencion()
         {
-
+            Console.WriteLine("Desea cerrar la intervencion?--1=Si--2=No ");
+            int opcion = Convert.ToInt32(Console.ReadLine());
+            return opcion == 1;
         }
         public void IngresarKMUnidadMovil(int n)
         {
@@ -29,6 +31,7 @@ namespace DatosBravo
         }
         public void IngresarFechaHoraLlegadaDotacion(int n,DateTimeOffset dateTime)
         {
+            datosIngresados[n] = new string[]{"",""};
             datosIngresados[n][0] = dateTime.ToString();
         }
         public void SeleccionarIntervencion(int intervencion)
@@ -37,7 +40,7 @@ namespace DatosBravo
         }
         public void FinalizarIntervencion()
         {
-
+            gestor.FinalizarIntervencion();
         }
         public  void HabilitarPantalla(Sesion sesion,Bombero bombero)
         {
@@ -76,7 +79,20 @@ namespace DatosBravo
         }
         public void SolicitarConfirmacionFinalizacionIntervencion()
         {
+            if (ConfirmarFinalizacionIntervencion())
+            {
+                gestor.FinalizacionIntervencionConfirmada();
 
+            }
+            else
+            {
+                Console.WriteLine("Oka");
+            }
+         
+        }
+        public void todoBien()
+        {
+            Console.WriteLine("TODO Cocinado");
         }
         public void todoMal()
         {
@@ -94,8 +110,12 @@ namespace DatosBravo
                 DateTimeOffset date= SolicitarFechaHoraLlegadaDotacion();
                 IngresarFechaHoraLlegadaDotacion(i,date);
                 IngresarKMUnidadMovil(i);
-                kmValidado = gestor.ValidarKMUnidadesMoviles(_datosDotacion[i], i);
             }
+            gestor.ValidarKMUnidadesMoviles(datosIngresados);
+        }
+        public void todoMalUnidadesMoviles()
+        {
+            Console.WriteLine("Escriba bien las unidades moviles");
         }
     }
 }

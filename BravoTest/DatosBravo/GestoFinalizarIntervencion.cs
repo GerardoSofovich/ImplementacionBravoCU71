@@ -24,7 +24,8 @@ namespace DatosBravo
         }
         public void FinalizacionIntervencionConfirmada()
         {
-
+            FinalizarIntervencion();
+            pantalla.todoBien();
         }
         public void KMUnidadIngresado()
         {
@@ -62,9 +63,9 @@ namespace DatosBravo
         }
         public void FinalizarIntervencion()
         {
-
+            intervencionSeleciondaObject.Finalizar(datosPantalla,fechaHoraActual);
         }
-        public bool ValidarKMUnidadesMoviles(string[] kilometrajes,int i)
+        public bool ValidarKMUnidadMovil(string[] kilometrajes,int i)
         {
             
             double kmInicial = Convert.ToDouble(intervenciones[i].ObtenerDotaciones()[i][2]);
@@ -94,19 +95,27 @@ namespace DatosBravo
         {
             return sesion.ValidarRol(bomberoEnSesion);
         }
-        public bool tomarDatos(string[][] datosIngresados)
+        public void ValidarKMUnidadesMoviles(string[][] datosIngresados)
         {
             bool validacion = true;
             int datos = datosIngresados.Count();
             for(int i = 0; i < datos; i++)
             {
-                validacion = ValidarKMUnidadesMoviles(datosIngresados[i],i);
+                validacion = ValidarKMUnidadMovil(datosIngresados[i],i);
                 if (!validacion)
                 {
                     break;
                 }
             }
-            return validacion;
+            if (validacion)
+            {
+                datosPantalla = datosIngresados;
+                pantalla.SolicitarConfirmacionFinalizacionIntervencion();
+            }
+            else
+            {
+                pantalla.todoMalUnidadesMoviles();
+            }
         }
     }
 }

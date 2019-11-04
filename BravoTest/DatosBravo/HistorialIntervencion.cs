@@ -8,9 +8,16 @@ namespace DatosBravo
 {
     public class HistorialIntervencion
     {
-        public void SetFechaHoraLlegada()
+        Estado estado;
+        DateTimeOffset fechaHoraDesde;
+        public HistorialIntervencion(Estado _estado)
         {
-
+            estado = _estado;
         }
+        public void SetFechaHoraLlegada(DateTimeOffset _fechaHoraDesde)
+        {
+            fechaHoraDesde = _fechaHoraDesde;
+        }
+
     }
 }

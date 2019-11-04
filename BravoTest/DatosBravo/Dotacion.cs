@@ -17,9 +17,9 @@ namespace DatosBravo
             fechaHoraSalida = _fechaHoraSalida;
         }
 
-        public void SetKMUnidadMovil()
+        public void SetKMUnidadMovil(double km)
         {
-            
+            unidadMovil.SetKM(km);
         }
         public void SetFechaHoraLlegada(DateTimeOffset _fechaHoraLlegada)
         {

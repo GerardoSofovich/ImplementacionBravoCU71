@@ -50,6 +50,7 @@
     <Compile Include="Estado.cs" />
     <Compile Include="FactoryIntervenciones.cs" />
     <Compile Include="FactoryRolUsuarioBombero.cs" />
+    <Compile Include="Finalizada.cs" />
     <Compile Include="GestoFinalizarIntervencion.cs" />
     <Compile Include="Gravedad.cs" />
     <Compile Include="HistorialIntervencion.cs" />

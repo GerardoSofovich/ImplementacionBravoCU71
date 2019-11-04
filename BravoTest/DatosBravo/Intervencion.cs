@@ -15,12 +15,14 @@ namespace DatosBravo
         TipoSiniestro tipoSiniestro;
         Estado estado;
         Dotacion[] dotaciones;
+        List<HistorialIntervencion> historialesIntervencion;
         public Intervencion(DateTimeOffset _fechaCreacion,string _ubicacion, string _resumen,Dotacion[] _dotaciones)
         {
             fechaCreacion = _fechaCreacion;
             ubicacion = _ubicacion;
             resumen = _resumen;
             dotaciones = _dotaciones;
+            historialesIntervencion = new List<HistorialIntervencion>();
 
         }
         public DateTimeOffset getFechaCreacion()
@@ -46,9 +48,9 @@ namespace DatosBravo
 
 
         }
-        public void Finalizar()
+        public void Finalizar(string [][] datosIngresados,DateTimeOffset fechaHoraActual)
         {
-
+            estado.Finalizar(this,datosIngresados,fechaHoraActual);
         }
         public string[][] ObtenerDotaciones()
         {
@@ -65,9 +67,13 @@ namespace DatosBravo
         {
             estado = _estado;
         }
-        public void AgregarHistorial()
+        public void AgregarHistorial(HistorialIntervencion historialIntervencion)
         {
-
+            historialesIntervencion.Add(historialIntervencion);
+        }
+        public  Dotacion[] GetDotacions()
+        {
+            return dotaciones;
         }
 
     }

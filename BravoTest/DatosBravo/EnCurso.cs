@@ -16,9 +16,18 @@ namespace DatosBravo
         {
             return true;
         }
-        public override void Finalizar()
+        public override void Finalizar(Intervencion intervencion,string[][] datosIngresados,DateTimeOffset fechaHoraActual)
         {
-
+            Estado estado = new Finalizada("Finalizada");
+            HistorialIntervencion historialIntervencionFinalizada = new HistorialIntervencion(estado);
+            historialIntervencionFinalizada.SetFechaHoraLlegada(fechaHoraActual);
+            for (int i = 0; i < datosIngresados.Count(); i++)
+            {
+                intervencion.GetDotacions()[i].SetFechaHoraLlegada(Convert.ToDateTime(datosIngresados[i][0]));
+                intervencion.GetDotacions()[i].SetKMUnidadMovil(Convert.ToDouble(datosIngresados[i][1]));
+            }
+            intervencion.AgregarHistorial(historialIntervencionFinalizada);
+            intervencion.SetEstado(estado);
         }
     }
 }

@@ -21,7 +21,11 @@ namespace DatosBravo
         {
             return false;
         }
-        public virtual void Finalizar()
+        public virtual bool EsFinalizada()
+        {
+            return false;
+        }
+        public virtual void Finalizar(Intervencion intervencion,string[][] datosIngresados,DateTimeOffset fechaHoraActual)
         {
 
         }

@@ -8,7 +8,7 @@ namespace DatosBravo
 {
     public class Finalizada:Estado
     {
-        public Finalizada(string _nombre) : base(_nombre)
+        public Finalizada() : base("Finalizada")
         {
 
         }

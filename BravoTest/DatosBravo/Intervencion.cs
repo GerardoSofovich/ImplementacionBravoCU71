@@ -76,5 +76,30 @@ namespace DatosBravo
             return dotaciones;
         }
 
+        public DateTimeOffset getFechaHoraSolicitud()
+        {
+            DateTimeOffset fechaHoraSolicitud = DateTimeOffset.Now;
+            //  loop Buscar Fecha y hora de intervencion
+            foreach (var historial in historialesIntervencion)
+            {
+                if (historial.esInformada())
+                {
+                    fechaHoraSolicitud = historial.getFechaHoraDesde();
+                }
+            }
+
+            return fechaHoraSolicitud;
+        }
+
+        public String getDomicilioReportado()
+        {
+            return ubicacion;
+        }
+
+        public String obtenerGravedad()
+        {
+            return gravedad.GetNombre();
+
+        }
     }
 }

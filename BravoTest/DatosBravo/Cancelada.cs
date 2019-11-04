@@ -8,7 +8,7 @@ namespace DatosBravo
 {
     public class Cancelada:Estado
     {
-        public Cancelada(string _nombre) : base(_nombre)
+        public Cancelada() : base("Cancelada")
         {
 
         }

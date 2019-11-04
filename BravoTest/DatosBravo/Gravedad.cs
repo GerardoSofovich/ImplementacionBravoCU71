@@ -8,9 +8,14 @@ namespace DatosBravo
 {
     public class Gravedad
     {
-        public void GetNombre()
+        private String nombre;
+        public String GetNombre()
         {
-
+            return nombre;
+        }
+        public void SetNombre(String _nombre)
+        {
+            this.nombre = _nombre;
         }
     }
 }

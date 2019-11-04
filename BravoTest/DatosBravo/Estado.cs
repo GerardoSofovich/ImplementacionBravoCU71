@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DatosBravo
 {
-    public class Estado
+    public abstract class Estado
     {
         string nombre;
         public Estado(string _nombre)
@@ -25,9 +25,14 @@ namespace DatosBravo
         {
             return false;
         }
+        public virtual bool esInformada()
+        {
+            return false;
+        }
         public virtual void Finalizar(Intervencion intervencion,string[][] datosIngresados,DateTimeOffset fechaHoraActual)
         {
 
         }
+
     }
 }

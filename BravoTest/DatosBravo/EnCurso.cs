@@ -8,7 +8,7 @@ namespace DatosBravo
 {
     public class EnCurso:Estado
     {
-        public EnCurso(string _nombre) : base(_nombre)
+        public EnCurso() : base("En Curso")
         {
 
         }
@@ -18,7 +18,7 @@ namespace DatosBravo
         }
         public override void Finalizar(Intervencion intervencion,string[][] datosIngresados,DateTimeOffset fechaHoraActual)
         {
-            Estado estado = new Finalizada("Finalizada");
+            Estado estado = new Finalizada();
             HistorialIntervencion historialIntervencionFinalizada = new HistorialIntervencion(estado);
             historialIntervencionFinalizada.SetFechaHoraLlegada(fechaHoraActual);
             for (int i = 0; i < datosIngresados.Count(); i++)

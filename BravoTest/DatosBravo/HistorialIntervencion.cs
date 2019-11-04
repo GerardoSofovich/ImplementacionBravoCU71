@@ -19,5 +19,15 @@ namespace DatosBravo
             fechaHoraDesde = _fechaHoraDesde;
         }
 
+        public DateTimeOffset getFechaHoraDesde()
+        {
+            return fechaHoraDesde;
+        }
+
+        public Boolean esInformada()
+        {
+            return estado.esInformada();
+        }
+
     }
 }

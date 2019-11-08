@@ -76,6 +76,15 @@ namespace DatosBravo
             return dotaciones;
         }
 
+        public void setResumen(String _resumen)
+        {
+            this.resumen = _resumen;
+        }    
+        public String getResumen()
+        {
+            return resumen;
+        }
+
         public DateTimeOffset getFechaHoraSolicitud()
         {
             DateTimeOffset fechaHoraSolicitud = DateTimeOffset.Now;

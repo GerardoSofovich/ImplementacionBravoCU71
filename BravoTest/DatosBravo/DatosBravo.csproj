@@ -33,6 +33,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,7 +45,6 @@
   <ItemGroup>
     <Compile Include="Bombero.cs" />
     <Compile Include="Cancelada.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Convocatoria.cs" />
     <Compile Include="Dotacion.cs" />
     <Compile Include="EnCurso.cs" />
@@ -52,19 +53,68 @@
     <Compile Include="FactoryRolUsuarioBombero.cs" />
     <Compile Include="Finalizada.cs" />
     <Compile Include="GestoFinalizarIntervencion.cs" />
-    <Compile Include="GestorNotificarConvocatoriaIntervencion.cs" />
     <Compile Include="Gravedad.cs" />
     <Compile Include="HistorialIntervencion.cs" />
     <Compile Include="Informada.cs" />
     <Compile Include="Intervencion.cs" />
-    <Compile Include="PantallaFinalizarIntervencion.cs" />
+    <Compile Include="PantallaFinalizarIntervencion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaFinalizarIntervencion.designer.cs">
+      <DependentUpon>PantallaFinalizarIntervencion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Rol.cs" />
     <Compile Include="Sesion.cs" />
+    <Compile Include="TabPageDotaciones.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPageDotaciones.Designer.cs">
+      <DependentUpon>TabPageDotaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="TipoAlerta.cs" />
     <Compile Include="TipoSiniestro.cs" />
     <Compile Include="UnidadMovil.cs" />
     <Compile Include="Usuario.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PantallaFinalizarIntervencion.aa-ER.resx">
+      <DependentUpon>PantallaFinalizarIntervencion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaFinalizarIntervencion.aa-ET.resx">
+      <DependentUpon>PantallaFinalizarIntervencion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaFinalizarIntervencion.resx">
+      <DependentUpon>PantallaFinalizarIntervencion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabPageDotaciones.resx">
+      <DependentUpon>TabPageDotaciones.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="resources\bravoColor.PNG" />
+    <Content Include="resources\casaLlena.png" />
+    <Content Include="resources\favicon.ico" />
+    <Content Include="resources\faviconHome.ico" />
+    <Content Include="resources\faviconUser.ico" />
+    <Content Include="resources\flecha-izquierda-en-circulo.png" />
+    <Content Include="resources\flecha-izquierda.png" />
+    <Content Include="resources\flechaIzquierda.png" />
+    <Content Include="resources\flechaIzquierdaLLena.png" />
+    <Content Include="resources\icon.png" />
+    <Content Include="resources\IconoBravo.PNG" />
+    <Content Include="resources\LogoBravo.jfif" />
+    <Content Include="resources\logo_bravo_real.png" />
+    <Content Include="resources\sinMujeres.jfif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

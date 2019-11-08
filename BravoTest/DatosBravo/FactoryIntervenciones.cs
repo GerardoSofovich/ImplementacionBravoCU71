@@ -18,7 +18,7 @@ namespace DatosBravo
             dotacions1[0] = dotacion;
             DateTimeOffset dateTime1 = new DateTimeOffset(2019, 10, 27, 22, 43, 31, TimeSpan.Zero);
             Intervencion intervencion1 = new Intervencion(dateTime1, "Avellaneda 2521", "Incendio de gravedad baja",dotacions1);
-            Estado estado1 = new EnCurso("En Curso");
+            Estado estado1 = new EnCurso();
             intervencion1.SetEstado(estado1);
             intervenciones[0] = intervencion1;
 
@@ -33,7 +33,7 @@ namespace DatosBravo
             dotacions2[1] = dotacion3;
             DateTimeOffset dateTime2= new DateTimeOffset(2019, 10, 27, 22, 55, 58, TimeSpan.Zero);
             Intervencion intervencion2 = new Intervencion(dateTime2, "Urquiza 123", "Emergencia en Recital, posibles lesiones",dotacions2);
-            Estado estado2 = new EnCurso("En Curso");
+            Estado estado2 = new EnCurso();
             intervencion2.SetEstado(estado2);
             intervenciones[1] = intervencion2;
 
@@ -53,7 +53,7 @@ namespace DatosBravo
             dotacions3[2] = dotacion7;
             DateTimeOffset dateTime3 = new DateTimeOffset(2019, 10, 28, 01, 22, 11, TimeSpan.Zero);
             Intervencion intervencion3 = new Intervencion(dateTime3, "Bulnes 541", "Explosion de garraga, Graveda alta",dotacions3);
-            Estado estado3 = new EnCurso("En Curso");
+            Estado estado3 = new EnCurso();
             intervencion3.SetEstado(estado3);
             intervenciones[2] = intervencion3;
 
@@ -65,7 +65,7 @@ namespace DatosBravo
             dotacions4[0] = dotacion4;
             DateTimeOffset dateTime4 = new DateTimeOffset(2019, 10, 28, 01, 43, 12, TimeSpan.Zero);
             Intervencion intervencion4 = new Intervencion(dateTime4, "Lavalleja 2678", "Choque de vehiculos",dotacions4);
-            Estado estado4 = new Cancelada("Cancelada");
+            Estado estado4 = new Cancelada();
             intervencion4.SetEstado(estado4);
             intervenciones[3] = intervencion4;
         }

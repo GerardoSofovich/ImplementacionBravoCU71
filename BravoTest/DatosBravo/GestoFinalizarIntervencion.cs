@@ -16,6 +16,9 @@ namespace DatosBravo
         DateTimeOffset fechaHoraActual;
         Intervencion intervencionSeleciondaObject;
         string[][] datosPantalla;
+        string[][] kilometrajeUnidad;
+        string[,] fechasHoras;
+
         public GestoFinalizarIntervencion(Sesion actualSesion,Bombero _bomberoEnSesion,PantallaFinalizarIntervencion _pantalla)
         {
             sesion = actualSesion;
@@ -27,17 +30,21 @@ namespace DatosBravo
             FinalizarIntervencion();
             pantalla.todoBien();
         }
-        public void KMUnidadIngresado()
+        public void KMUnidadIngresado(String[] _dominios, string[][] _kilometros)
         {
+            kilometrajeUnidad = _kilometros;
+             ValidarKMUnidadesMoviles(kilometrajeUnidad);
+            //pantalla.solicitarConfirmacionFinalizacionIntervencion();
 
         }
-        public void fechaHoraLlegadaDotacionIngresada()
+        public void fechaHoraLlegadaDotacionIngresada(String[,] _fechasHoras)
         {
-
+            fechasHoras = _fechasHoras;
+            pantalla.solicitarKmUnidadMovil();
         }
         public void IntervencionSeleccionada(int _intervencion)
         {
-            intervencionSeleciondaObject = intervenciones[_intervencion - 1];
+            intervencionSeleciondaObject = intervenciones[_intervencion];
             pantalla.MostrarDotacion(intervencionSeleciondaObject.ObtenerDotaciones());
         }
         public void OpcionFinalizarIntervencion()
@@ -45,17 +52,15 @@ namespace DatosBravo
             if (ValidarRolUsuario())
             {
                 ObtenerFechaActual();
-                
-                intervenciones=ObtenerIntervencionesEnCurso();
+
+                intervenciones = ObtenerIntervencionesEnCurso();
                 OrdenarIntervencionesXFechaCreacion();
-                pantalla.SolicitarSeleccionIntervencion(intervenciones);
+                pantalla.solicitarSeleccionIntervencion(intervenciones);
             }
             else
             {
                 pantalla.todoMal();
-            }
-
-            
+            }                
         }
         public void FinCU()
         {
@@ -97,25 +102,8 @@ namespace DatosBravo
         }
         public void ValidarKMUnidadesMoviles(string[][] datosIngresados)
         {
-            bool validacion = true;
-            int datos = datosIngresados.Count();
-            for(int i = 0; i < datos; i++)
-            {
-                validacion = ValidarKMUnidadMovil(datosIngresados[i],i);
-                if (!validacion)
-                {
-                    break;
-                }
-            }
-            if (validacion)
-            {
-                datosPantalla = datosIngresados;
-                pantalla.SolicitarConfirmacionFinalizacionIntervencion();
-            }
-            else
-            {
-                pantalla.todoMalUnidadesMoviles();
-            }
+            datosPantalla = datosIngresados;
+            pantalla.solicitarConfirmacionFinalizacionIntervencion();
         }
     }
 }
